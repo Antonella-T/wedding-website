@@ -1,0 +1,504 @@
+/* GLOBAL styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(128, 128, 128);
+    line-height: 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1900px;
+    margin: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Sacramento', cursive;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    color: rgb(239, 78, 148);
+    font-size: 1.8rem;
+}
+
+p strong {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+}
+
+span {
+    color: rgb(239, 78, 148);
+}
+
+
+
+/* HEADER styles */
+header {
+    background-image: url(../images/bride.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    padding: 4% 2%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+header h1 {
+    flex-basis: 50%;
+    margin: 0;
+    font-weight: 100;
+    font-size: 2.2rem;
+}
+
+header h2 {
+    font-weight: 100;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+header h1 a {
+    color: rgb(255, 255, 255);
+}
+
+header .banner {
+    flex-grow: 1;
+    text-align: center;
+    margin-top: -95px;
+}
+
+header .banner p {
+    margin: 1%;
+}
+
+
+
+/* NAV styles */
+nav {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav input {
+    display: none;
+}
+
+nav .menu {
+    display: none;
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* font awesome icon */
+nav .fa {
+    font-size: 1.5rem;
+}
+
+
+
+/* MAIN styles */
+main {
+    text-align: center;
+}
+
+main h2 {
+    color: rgb(239, 78, 148);
+}
+
+.groom-bride {
+    margin-top: 4%;
+}
+
+.groom-bride .heart-icon {
+    display: none;
+}
+
+.groom img,
+.bride img {
+    height: 110px;
+    border-radius: 75px;
+}
+
+.groom {
+    padding: 10% 2% 6%;
+}
+
+.bride {
+    padding: 0 2% 6%;
+}
+
+
+
+/* FORM-CONTACT styles */
+.form-contact {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3)), url(../images/img_bg_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 10% 15%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.form-contact h2 {
+    color: rgb(255, 255, 255);
+}
+
+.form-contact p {
+    color: rgb(207, 207, 207);
+}
+
+
+/*******************************************************/
+
+
+.popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    display: block;
+}
+
+/* MODAL BOX styles */
+.popup-container {
+    /*Hides modal-box when there is no "active" class*/
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .6);
+    padding: 3%;
+}
+
+.popup-container.active {
+    /*displays modal-box when "active" class is present*/
+    display: block;
+}
+
+.popup-content {
+    background: #ffffff;
+    border: 3px solid #666666;
+    padding: 0 3% 3%;
+    width: 50%;
+    margin: auto;
+}
+
+.popup-content .fa-times-circle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.popup-content p {
+    color: rgb(0, 0, 0);
+}
+
+/*********************************************************/
+
+/* FORM styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form button {
+    margin-bottom: 2%;
+    padding: 3%;
+    border-radius: 2px;
+    border: none;
+    background-color: rgba(152, 146, 146, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+form button {
+    border-radius: 20px;
+    background-color: rgb(239, 78, 148);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+form button:hover {
+    color: rgb(239, 78, 148);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgba(241, 80, 150, 0.73);
+}
+
+/* This is to change the color of the placeholder */
+input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff75;
+}
+
+
+
+/* CONTACT-INFO styles */
+.contact-info {
+    text-align: left;
+    padding: 0% 2% 6%;
+}
+
+.contact-info>div {
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.contact-info img {
+    margin-right: 3%;
+}
+
+.contact-info span a {
+    color: rgb(239, 78, 148);
+}
+
+
+
+/* GOOGLE MAPS styles */
+.map-container {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+}
+
+
+
+/* FOOTER styles */
+footer {
+    text-align: center;
+    padding: 13% 2%;
+}
+
+footer p {
+    margin-top: -15px;
+}
+
+footer a {
+    margin: 0 2%;
+    display: inline-block;
+}
+
+footer img,
+.contact-info img {
+    width: 24px;
+    height: 26px;
+}
+
+footer #top-btn {
+    color: rgb(255, 255, 255);
+    background-color: rgba(65, 65, 65, 0.75);
+    border: none;
+    padding: 2%;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+    cursor: pointer;
+}
+
+footer #top-btn:hover {
+    background-color: rgb(173, 173, 173);
+}
+
+
+/* MEDIA QUERY MIN-WIDTH: 768 */
+@media screen and (min-width: 768px) {
+
+    /* GROOM & BRIDE styles */
+    .groom {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+        align-items: center;
+        padding: 10% 2% 0%;
+    }
+
+    .groom .groom-info {
+        margin: 0 3% 0 6%;
+    }
+
+    .bride .bride-info {
+        margin: 0 6% 0 3%;
+    }
+
+    .bride {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* FOOTER styles */
+    footer button {
+        display: none;
+    }
+}
+
+
+
+/* MEDIA QUERY MIN-WIDTH: 990 */
+@media screen and (min-width: 990px) {
+
+    /* GLOBAL styles */
+    html {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    /* HEADER styles */
+    header {
+        padding: 2% 6%;
+
+    }
+
+    header h2 {
+        font-size: 4.5rem;
+        margin-bottom: 3%;
+    }
+
+    /* NAV styles */
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: flex-end;
+    }
+
+    nav .menu .active {
+        color: rgb(255, 255, 255);
+    }
+
+    nav label {
+        display: none;
+    }
+
+    nav .menu li {
+        margin-right: 3%;
+    }
+
+    /* GROOM & BRIDE styles */
+    .groom-bride {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .groom .groom-info {
+        margin: 0 3% 0 13%;
+    }
+
+    .bride .bride-info {
+        margin: 0 13% 0 3%;
+    }
+
+    .groom-bride h2,
+    .groom-bride p {
+        flex-basis: 100%;
+    }
+
+    .groom {
+        flex-basis: 50%;
+        padding: 2% 0 6% 7%;
+    }
+
+    .bride {
+        flex-basis: 50%;
+        padding: 2% 7% 6% 0;
+    }
+
+    .groom-bride .heart-icon {
+        color: rgb(239, 78, 148);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 60%;
+        right: 48.5%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+
+    /* FORM styles */
+    form {
+        flex-direction: row;
+    }
+
+    form input,
+    form button {
+        padding: 2% 3%;
+        margin: 0 2%;
+    }
+
+    form button {
+        padding: 0 7%;
+    }
+
+    /* CONTACT-INFO styles */
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-info p {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .contact-info div p {
+        text-align: left;
+    }
+
+    .contact-info>div {
+        margin: 3% 0;
+        flex-basis: 33%;
+        justify-content: center;
+    }
+
+    /* FOOTER styles */
+    footer {
+        padding: 8% 2%;
+    }
+}
